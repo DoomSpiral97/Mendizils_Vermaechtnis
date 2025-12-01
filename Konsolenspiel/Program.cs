@@ -1,3 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
-Console.WriteLine("Hello, World!");
+namespace Konsolengame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Hilfsmethoden.Begrüßung();
+            Spieler spieler = Hilfsmethoden.Charakterwahl();
+            Console.WriteLine($"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n Charisma:{spieler.Charisma}");
+        }
+    }
+}
