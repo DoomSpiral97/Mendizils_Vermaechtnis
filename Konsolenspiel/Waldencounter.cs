@@ -24,6 +24,12 @@ public class WaldEncounter : Encounter
     {
         Console.WriteLine("Du betrittst einen düsteren Wald. Zwischen den Bäumen raschelt etwas...");
     }
+    
+    public override void PortraitAnsehen()
+    {
+        Console.WriteLine("        .-\"\"\"\".\n       /       \\\n   __ /   .-.  .\\\n  /  `\\  /   \\/  \\\n  |  _ \\/   .==.==.\n  | (   \\  /____\\__\\\n   \\ \\      (_()(_()\n    \\ \\            '---._\n     \\                   \\_\n  /\\ |`       (__)________/\n /  \\|     /\\___/\n|    \\     \\||VV\n|     \\     \\|\"\"\"\",\n|      \\     ______)\n\\       \\  /`\n      \\(");
+    }
+
 
     public override void Überredenstext()
     {
@@ -41,5 +47,6 @@ public class WaldEncounter : Encounter
         Console.WriteLine("Der Wald wirkt plötzlich friedlicher. Du hast den Wald-Encounter erfolgreich geschafft.");
     }
 
+    
  
 }

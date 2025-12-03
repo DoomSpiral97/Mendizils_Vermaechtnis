@@ -8,10 +8,12 @@ public abstract class Encounter
 
     public abstract void ShowIntro();
     public abstract void Überredenstext();
+    public abstract void PortraitAnsehen();
+
+    
 
     // Jede Unterklasse liefert ihren Gegner
     protected abstract Charakter GetGegner();
-
     // Einstiegspunkt
     public bool StartEncounter(Spieler spieler)
     {
@@ -28,6 +30,7 @@ public abstract class Encounter
             Console.WriteLine("1) Kämpfen");
             Console.WriteLine("2) Überreden");
             Console.WriteLine("3) Schleichen");
+            Console.WriteLine("4) Portrait ansehen");
             Console.Write("Deine Wahl: ");
 
             string? eingabe = Console.ReadLine();
@@ -46,6 +49,9 @@ public abstract class Encounter
                     erfolgreich = TrySneak(spieler, gegner);
                     encounterBeendet = true;
                     break;
+                case "4":
+                PortraitAnsehen();    
+                break;
                 default:
                     Console.WriteLine("Ungültige Auswahl, bitte 1 / 2 / 3 eingeben.");
                     break;

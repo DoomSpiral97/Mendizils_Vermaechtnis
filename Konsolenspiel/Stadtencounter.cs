@@ -21,6 +21,11 @@ public class Stadtencounter : Encounter
         Name = "Düsterer Wald";
     }
 
+    public override void PortraitAnsehen()
+    {
+        Console.WriteLine("  ,   A           {}\n / \\, | ,        .--.\n|    =|= >      /.--.\\\n \\ /` | `       |====|\n  `   |         |`::`|  \n      |     .-;`\\..../`;_.-^-._\n     /\\\\/  /  |...::..|`   :   `|\n     |:'\\ |   /'''::''|   .:.   |\n      \\ /\\;-,/\\   ::  |..:::::..|\n      |\\ <` >  >._::_.| ':::::' |\n      | `\"\"`  /   ^^  |   ':'   |\n      |       |       \\    :    /\n      |       |        \\   :   / \n      |       |___/\\___|`-.:.-`\n      |        \\_ || _/    `\n      |        <_ >< _>\n      |        |  ||  |\n      |        |  ||  |\n      |       _\\.:||:./_\n      |      /____/\\____\\");
+    }
+
     public override void ShowIntro()
     {
         Console.WriteLine("Du betrittst die Gassen der Stadt");
