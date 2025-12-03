@@ -3,15 +3,12 @@ namespace Konsolengame;
 public abstract class Encounter
 {
     protected readonly Random Random = new Random();
-
-    public string Name { get; protected set; }
-
     public abstract void ShowIntro();
     public abstract void Überredenstext();
     public abstract void PortraitAnsehen();
-
+    public abstract void GameOverBild();
+    protected abstract void ShowQuestSuccess();
     
-
     // Jede Unterklasse liefert ihren Gegner
     protected abstract Charakter GetGegner();
     // Einstiegspunkt
@@ -108,8 +105,12 @@ public abstract class Encounter
             {   Thread.Sleep(1000);
                 Console.ForegroundColor=ConsoleColor.Red;
                 Console.WriteLine("Du brichst verwundet zusammen...");
+                Console.WriteLine("Hier endet deine Reise...");
                 Console.ResetColor();
-                return false;
+                GameOverBild();
+                Console.WriteLine("");
+                Console.ResetColor();
+                Environment.Exit(0);
             }
         }
 
@@ -164,6 +165,6 @@ public abstract class Encounter
         return false;
     }
 
-    protected abstract void ShowQuestSuccess();
+    
 }
 

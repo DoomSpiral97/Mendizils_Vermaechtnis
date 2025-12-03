@@ -23,6 +23,8 @@ namespace Konsolengame
                 Console.WriteLine("3) Zur den Ruinen der Trauer");
                 Console.WriteLine("4) Zur Drachenhöhle");
                 Console.WriteLine("5) Inventar anzeigen");
+                Console.WriteLine("6) Stadt erkunden");
+                
                 Console.WriteLine("0) Spiel beenden");
                 string? eingabe = Console.ReadLine();
 
@@ -114,6 +116,9 @@ namespace Konsolengame
                     {spieler.InventarAnzeigen();
                         break;
                     }
+                    case "6":
+                        StadtErkunden.Start(spieler);
+                        break;
                     case "0":
                         Console.WriteLine("Tschüss, Spiel wird beendet.");
                         spielLaeuft = false;
