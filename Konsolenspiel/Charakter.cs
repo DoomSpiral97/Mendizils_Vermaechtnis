@@ -9,5 +9,6 @@ public class Charakter
     public int Stealth { get; set; }
     public string Beschreibung { get; set; } 
     public string Name { get; set; }
-    public int perception{get;set;}
+    public int Wahrnehmnung{get;set;}
+    public string Beleidigung{ get;set;}
 }

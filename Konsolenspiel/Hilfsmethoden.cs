@@ -33,7 +33,7 @@ public class Hilfsmethoden
                 {
                     Name = sname,
                     Beschreibung = "Krieger",
-                    HP = 150,
+                    HP = 200,
                     MaximaleHP = 150,
                     Stärke = 20,
                     Charisma = 5,
