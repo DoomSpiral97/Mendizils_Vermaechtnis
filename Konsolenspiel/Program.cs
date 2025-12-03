@@ -21,6 +21,7 @@ namespace Konsolengame
                 Console.WriteLine("1) In den Wald");
                 Console.WriteLine("2) Zur Kammer des Magisters");
                 Console.WriteLine("3) Zur den Ruinen der Trauer");
+                Console.WriteLine("4) Zur Drachenhöhle");
                 Console.WriteLine("0) Spiel beenden");
                 string? eingabe = Console.ReadLine();
 
@@ -69,6 +70,25 @@ namespace Konsolengame
                         {
                             Console.WriteLine(
                                 "Du kehrst erfolgreich in die Stadt zurück mit dem Kristall sicher in deinem Beutel");
+
+                            spieler.ItemHinzufügen(Items.Kristall);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+                        }
+
+                        break;
+                    }
+                    case "4":
+                    {
+                        var encounter = new Drachenencounter();
+                        bool dracheGeschafft = encounter.StartEncounter(spieler); 
+
+                        if (dracheGeschafft)
+                        {
+                            Console.WriteLine(
+                                "Du kehrst erfolgreich in die Stadt zurück mit dem SChatz des Drachen in deinem Beutel");
 
                             spieler.ItemHinzufügen(Items.Kristall);
                         }
