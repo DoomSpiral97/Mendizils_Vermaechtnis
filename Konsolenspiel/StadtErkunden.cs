@@ -93,9 +93,7 @@ public static class StadtErkunden
 
     private static void HoereGeruechte(Spieler spieler)
     {
-        Console.WriteLine("Du lauschst den Gesprächen auf dem Marktplatz...");   // Hier dann aus einer Liste mit gerüchen eine random picken vielleicht??
-        Console.WriteLine("Du hörst etwas über einen Drachen in den Bergen.");
-        
+        Gerüchte.GerüchteHören(spieler);
     }
 
     private static void BesucheBar(Spieler spieler)     // hier eine Liste mit textevents und daraus random picken, evtl kampf bei streitigkeit?
