@@ -20,7 +20,7 @@ public class Gerüchte
 
         Console.WriteLine("Du probierst interessanten Tratsch aufzuschnappen...");
         int wurf = _random.Next(1, 100);
-        if (wurf > 69)
+        if (wurf > 69 )
         {
             Console.WriteLine("Du hörst nichts sonderlich spannendes... ");
             return;

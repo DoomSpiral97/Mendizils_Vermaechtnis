@@ -3,7 +3,7 @@ namespace Konsolengame;
 
 public class Stadtencounter : Encounter
     {
-        private readonly Charakter charakter = new Charakter
+        private readonly Gegner gegner = new Gegner
         {
             Stärke = 22,
             Beschreibung = "Ein Stadtwache",
@@ -37,9 +37,9 @@ public class Stadtencounter : Encounter
         Console.WriteLine("Die Stadtwache freut sich und geht in die Taverne.");
     }
 
-    protected override Charakter GetGegner()
+    protected override Gegner GetGegner()
     {
-        return charakter;
+        return gegner;
     }
 
     protected override void ShowQuestSuccess()

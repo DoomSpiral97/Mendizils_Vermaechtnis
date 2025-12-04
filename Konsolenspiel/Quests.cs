@@ -9,7 +9,7 @@ public class Quests
 
         if (waldGeschafft)
         {
-            Console.WriteLine("Du hast den Wald geschafft.");
+            
             spieler.ItemHinzufügen(Items.Amulett);
         }
         else

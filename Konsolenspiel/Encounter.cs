@@ -10,7 +10,7 @@ public abstract class Encounter
     protected abstract void ShowQuestSuccess();
     
     // Jede Unterklasse liefert ihren Gegner
-    protected abstract Charakter GetGegner();
+    protected abstract Gegner GetGegner();
     // Einstiegspunkt
     public bool StartEncounter(Spieler spieler)
     {
@@ -69,7 +69,7 @@ public abstract class Encounter
     }
 
     // Standard-Kampflogik für alle Encounter
-    protected virtual bool Fight(Spieler spieler, Charakter gegner)
+    protected virtual bool Fight(Spieler spieler, Gegner gegner)
     {
         Console.WriteLine();
         Console.WriteLine($"{gegner.Name} greift dich an!");
@@ -93,7 +93,7 @@ public abstract class Encounter
             // Gegner greift an
             int schadenGegner = gegner.Stärke;
             spieler.HP -= schadenGegner;
-            Console.ForegroundColor = ConsoleColor.Red;
+            
             Console.WriteLine($"{gegner.Name} trifft dich für {schadenGegner} Schaden. Deine HP: {spieler.HP}");
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -104,6 +104,7 @@ public abstract class Encounter
             if (spieler.HP <= 0)
             {   Thread.Sleep(1000);
                 Console.ForegroundColor=ConsoleColor.Red;
+                Console.WriteLine($"{gegner.KampfFail} ");
                 Console.WriteLine("Du brichst verwundet zusammen...");
                 Console.WriteLine("Hier endet deine Reise...");
                 Console.ResetColor();
@@ -118,7 +119,7 @@ public abstract class Encounter
     }
 
     // Standard-Überreden
-    protected virtual bool TryPersuade(Spieler spieler, Charakter gegner)
+    protected virtual bool TryPersuade(Spieler spieler, Gegner gegner)
     {
         Console.WriteLine();
         Console.WriteLine($"Du versuchst, {gegner.Name} zu überreden, dich in Ruhe zu lassen...");
@@ -130,19 +131,21 @@ public abstract class Encounter
 
         if (probe >= 15)
         {Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"{gegner.Name} scheint dir zu glauben.");
+            Console.WriteLine($"Erfolg!");
             Console.ResetColor();
             Überredenstext();
             return true;
         }
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"{gegner.Name} lässt sich nicht überzeugen!");
+        Console.WriteLine("Versagt");
         Console.ResetColor();
+        Console.WriteLine($"{gegner.ÜberredenFail} ");
+        
         return false;
     }
 
     // Standard-Schleichen
-    protected virtual bool TrySneak(Spieler spieler, Charakter gegner)
+    protected virtual bool TrySneak(Spieler spieler, Gegner gegner)
     {
         Console.WriteLine();
         Console.WriteLine($"Du versuchst, dich an {gegner.Name} vorbeizuschleichen...");
@@ -160,8 +163,9 @@ public abstract class Encounter
             return true;
         }
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"Ein Geräusch verrät dich – {gegner.Name} bemerkt dich!");
+        Console.WriteLine($"Versagt");
         Console.ResetColor();
+        Console.WriteLine($"{gegner.SneakFail} ");
         return false;
     }
 

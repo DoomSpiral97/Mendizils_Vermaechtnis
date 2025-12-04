@@ -13,4 +13,5 @@ public class Charakter
     public string Beleidigung{ get;set;}
     
     public string Portrait { get; set; }
+    
 }

@@ -2,7 +2,7 @@ namespace Konsolengame;
 
 public class Ruinenencounter : Encounter
 {
-    private readonly Charakter charakter = new Charakter
+    private readonly Gegner gegner = new Gegner
     {
         Stärke = 22,
         Beschreibung = "Ein Skelett",
@@ -36,9 +36,9 @@ public class Ruinenencounter : Encounter
         Console.WriteLine("Das Skelett geht zurück in den Sarg");
     }
 
-    protected override Charakter GetGegner()
+    protected override Gegner GetGegner()
     {
-        return charakter;
+        return gegner;
     }
 
     protected override void ShowQuestSuccess()

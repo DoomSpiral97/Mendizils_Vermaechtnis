@@ -3,7 +3,7 @@ namespace Konsolengame;
 public class Drachenencounter :Encounter
 {
    
-    private readonly Charakter charakter = new Charakter
+    private readonly Gegner gegner = new Gegner
     {
         Stärke = 22,
         Beschreibung = "Ein Drache",
@@ -38,9 +38,9 @@ public class Drachenencounter :Encounter
         Console.WriteLine("Das Drache ist eigentlich recht chill.");
     }
 
-    protected override Charakter GetGegner()
+    protected override Gegner GetGegner()
     {
-        return charakter;
+        return gegner;
     }
 
     protected override void ShowQuestSuccess()
