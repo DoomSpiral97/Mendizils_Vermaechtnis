@@ -2,7 +2,7 @@ using Konsolengame;
 
 public class WaldEncounter : Encounter
 {
-    private readonly Goblin goblin = new Goblin
+    private readonly Charakter character = new Charakter
     {
         Stärke = 22,
         Beschreibung = "Ein fieser Goblin",
@@ -36,7 +36,7 @@ public class WaldEncounter : Encounter
 
     protected override Charakter GetGegner()
     {
-        return goblin;
+        return character;
     }
 
     protected override void ShowQuestSuccess()

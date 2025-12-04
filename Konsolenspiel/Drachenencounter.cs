@@ -3,7 +3,7 @@ namespace Konsolengame;
 public class Drachenencounter :Encounter
 {
    
-    private readonly Drache _drache = new Drache
+    private readonly Charakter charakter = new Charakter
     {
         Stärke = 22,
         Beschreibung = "Ein Drache",
@@ -40,7 +40,7 @@ public class Drachenencounter :Encounter
 
     protected override Charakter GetGegner()
     {
-        return _drache;
+        return charakter;
     }
 
     protected override void ShowQuestSuccess()

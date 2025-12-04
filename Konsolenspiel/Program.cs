@@ -26,7 +26,7 @@ namespace Konsolengame
 
                     case "2":
                     {
-                        Quests.WaldQuest(spieler);
+                        Quests.MagisterQuest(spieler);
                         break;
                     }
                     case "3":

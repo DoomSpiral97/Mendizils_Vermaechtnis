@@ -2,7 +2,7 @@ namespace Konsolengame;
 
 public class Ruinenencounter : Encounter
 {
-    private readonly Skelett skelett = new Skelett
+    private readonly Charakter charakter = new Charakter
     {
         Stärke = 22,
         Beschreibung = "Ein Skelett",
@@ -38,13 +38,13 @@ public class Ruinenencounter : Encounter
 
     protected override Charakter GetGegner()
     {
-        return skelett;
+        return charakter;
     }
 
     protected override void ShowQuestSuccess()
     {
         Console.WriteLine();
-        Console.WriteLine("Du hast das Schild aus der Kammer des Magistrats erbeutet.");
+        Console.WriteLine("Du hast den Kristall erbeutet");
     }
 
  

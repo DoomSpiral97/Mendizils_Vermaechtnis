@@ -3,7 +3,7 @@ namespace Konsolengame;
 
 public class Stadtencounter : Encounter
     {
-        private readonly Wache wache = new Wache
+        private readonly Charakter charakter = new Charakter
         {
             Stärke = 22,
             Beschreibung = "Ein Stadtwache",
@@ -39,7 +39,7 @@ public class Stadtencounter : Encounter
 
     protected override Charakter GetGegner()
     {
-        return wache;
+        return charakter;
     }
 
     protected override void ShowQuestSuccess()
