@@ -4,47 +4,71 @@ public class Quests
 {
     public static void WaldQuest(Spieler spieler)
     {
-        var encounter = new WaldEncounter();
-        bool waldGeschafft = encounter.StartEncounter(spieler); // Gegner kommt aus GetGegner()
-
-        if (waldGeschafft)
+        if (spieler.Inventar.Contains(Items.Amulett))
         {
-            spieler.ItemHinzufügen(Items.Amulett);
+            Console.WriteLine("Der Wald ist friedlich geworden seitdem du das Amulett an dich genommen hast. Du genießt die Ruhe für einen Moment und kehrst zurück in die Stadt");
+            spieler.HP += 10;
         }
         else
         {
-            Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            var encounter = new WaldEncounter();
+            bool waldGeschafft = encounter.StartEncounter(spieler); // Gegner kommt aus GetGegner()
+
+            if (waldGeschafft)
+            {
+                spieler.ItemHinzufügen(Items.Amulett);
+            }
+            else
+            {
+                Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            }
         }
     }
 
     public static void MagisterQuest(Spieler spieler)
     {
-        var encounter = new Stadtencounter();
-        bool stadtGeschafft = encounter.StartEncounter(spieler); 
-
-        if (stadtGeschafft)
+        if (spieler.Inventar.Contains(Items.Schild))
         {
-            spieler.ItemHinzufügen(Items.Schild);
+            Console.WriteLine("Du siehst noch leichte Rauchschwaden aus dem einstigen Anwesen aufsteigen");
         }
         else
         {
-            Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            var encounter = new Stadtencounter();
+            bool stadtGeschafft = encounter.StartEncounter(spieler);
+
+            if (stadtGeschafft)
+            {
+                spieler.ItemHinzufügen(Items.Schild);
+            }
+            else
+            {
+                Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            }
         }
     }
 
     public static void RuinenQuest(Spieler spieler)
     {
-        var encounter = new Ruinenencounter();
-        bool ruineGeschafft = encounter.StartEncounter(spieler); 
-
-        if (ruineGeschafft)
+        if (spieler.Inventar.Contains(Items.Amulett))
         {
-            spieler.ItemHinzufügen(Items.Kristall);
+            Console.WriteLine("Die Ruinen sind ruhig, du siehst dass sich  deinem letzten Besuch ein paar Blumen gesprossen sind. ");
         }
         else
         {
-            Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            var encounter = new Ruinenencounter();
+            bool ruineGeschafft = encounter.StartEncounter(spieler); 
+
+            if (ruineGeschafft)
+            {
+                spieler.ItemHinzufügen(Items.Kristall);
+            }
+            else
+            {
+                Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            }
         }
+        
+        
     }
 
     public static void DrachenQuest(Spieler spieler)
@@ -60,12 +84,21 @@ public class Quests
             {
                 Console.WriteLine(
                     "Du kehrst erfolgreich in die Stadt zurück mit dem Schatz des Drachen in deinem Beutel");
-                // Optional: weitere Belohnung
+                spieler.ItemHinzufügen(Items.Goldkiste);
             }
             else
             {
                 Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
             }
+        }
+
+        
+
+        else if(spieler.Inventar.Contains(Items.Kristall) &&
+         spieler.Inventar.Contains(Items.Schild) &&
+         spieler.Inventar.Contains(Items.Amulett)&& spieler.Inventar.Contains(Items.Goldkiste))
+        {
+            Console.WriteLine("Aasfresser haben begonnen an den Überresten des Drachen zu nagen. Du denkst an deine alten Heldentaten zurück und gehst mit einem Lächeln auf den Lippen zurück in die Stadt.");
         }
         else
         {
