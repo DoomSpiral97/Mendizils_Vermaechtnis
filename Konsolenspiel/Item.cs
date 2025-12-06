@@ -19,5 +19,6 @@ public static class Items
     public static Item Schild   = new Item("Schild","Ein Schild");
     public static Item Amulett  = new Item("Amulett","Ein Amulett");
     public static Item Goldkiste  = new Item("Goldkiste","Eine Kiste voll Gold");
+    public static Item Bier = new Item("Bier","Eine besonders leckeres Bier");
 
 }

@@ -115,7 +115,7 @@ public class Quests
 
             if (barGeschafft)
             {
-                spieler.ItemHinzufügen(Items.Amulett);
+                spieler.ItemHinzufügen(Items.Bier);
             }
             else
             {

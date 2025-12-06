@@ -105,7 +105,7 @@ public static class StadtErkunden
     }
 
     private static void
-        BesucheBar(Spieler spieler) // hier eine Liste mit textevents und daraus random picken, evtl kampf bei streitigkeit?
+        BesucheBar(Spieler spieler) 
     {
         bool inBar = true;
         while (inBar)
@@ -119,10 +119,11 @@ public static class StadtErkunden
             switch (eingabe)
             {
                 case "1":
-                    if (spieler.Inventar.Contains(Items.Schild))
+                    if (spieler.Inventar.Contains(Items.Schild)&&!spieler.Inventar.Contains(Items.Bier))
                     {
                         Quests.BarQuest(spieler);
                     }
+                    
 
                     else if(spieler.Inventar.Contains(Items.Kristall))
                 {
