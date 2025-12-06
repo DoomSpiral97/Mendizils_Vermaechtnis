@@ -223,21 +223,22 @@ public abstract class Encounter
         Console.WriteLine($"Wahrnehmung des Gegners: {gegner.Wahrnehmnung}");
 
         if (stealthWert >= gegner.Wahrnehmnung)
-        {Console.ForegroundColor = ConsoleColor.Green;
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Du verschwindest lautlos im Schatten. Der Gegner bemerkt dich nicht.");
             Console.ResetColor();
             return true;
         }
         else
-        { 
+        {
             Console.WriteLine($"{gegner.SneakFail} ");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Versagt");
             Console.ResetColor();
             return false;
         }
+
     }
 
-    
 }
 

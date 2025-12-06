@@ -1,15 +1,42 @@
 ﻿using System;
+
 namespace Konsolengame
-{ class Program
+{
+    class Program
     {
+
         static void Main(string[] args)
         {
+            Spieler spieler;
             bool spielLaeuft = true;
+            Console.WriteLine("1) Neues Spiel");
+            Console.WriteLine("2) Spiel laden");
+            string? choice = Console.ReadLine();
 
-            Hilfsmethoden.Begrüßung();
-            Spieler spieler = Hilfsmethoden.Charakterwahl();
+            if (choice == "2")
+            {
+                var geladenerSpieler = Speicherstand.LadeSpieler();
+                if (geladenerSpieler != null)
+                {
+                    spieler = geladenerSpieler;
+                    Console.WriteLine($"Willkommen zurück, {spieler.Name}!");
+                }
+                else
+                {
+                    Console.WriteLine("Kein Speicherstand gefunden. Neues Spiel wird gestartet.");
+                    spieler = Hilfsmethoden.Charakterwahl();
+                }
+            }
+            else
+            {
+                spieler = Hilfsmethoden.Charakterwahl();
+            }
 
-            
+            // ... dein Spiel-Loop ...
+
+
+
+
 
             while (spielLaeuft)
             {
@@ -20,7 +47,7 @@ namespace Konsolengame
                 {
                     case "1":
                     {
-                        Quests.WaldQuest(spieler);
+                        StadtErkunden.Start(spieler);
                         break;
                     }
 
@@ -31,25 +58,30 @@ namespace Konsolengame
                     }
                     case "3":
                     {
-                       Quests.RuinenQuest(spieler);
-                       break;
+                        Quests.RuinenQuest(spieler);
+                        break;
                     }
-                    case "4":
+                    case "5":
                     {
                         Quests.DrachenQuest(spieler);
                         break;
                     }
-
-                    case "I":
-                    {spieler.InventarAnzeigen();
+                    case "4":
+                        Quests.WaldQuest(spieler);
+                        break;
+                    case "i":
+                    {
+                        spieler.InventarAnzeigen();
                         break;
                     }
-                    case "6":
-                        StadtErkunden.Start(spieler);
-                        break;
                     case "0":
                         Console.WriteLine("Bis zum nächsten Mal Noob");
                         spielLaeuft = false;
+                        break;
+                    case "s":
+                        Console.WriteLine(
+                            "Du denkst über deine Erlebten Abenteuer nach und schreibst sie in dein Tagebuch");
+                        Speicherstand.SpeichereSpieler(spieler);
                         break;
 
                     default:

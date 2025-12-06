@@ -49,7 +49,7 @@ public class Quests
 
     public static void RuinenQuest(Spieler spieler)
     {
-        if (spieler.Inventar.Contains(Items.Amulett))
+        if (spieler.Inventar.Contains(Items.Kristall))
         {
             Console.WriteLine("Die Ruinen sind ruhig, du siehst dass sich  deinem letzten Besuch ein paar Blumen gesprossen sind. ");
         }

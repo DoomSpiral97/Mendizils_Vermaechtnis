@@ -21,8 +21,9 @@ public class Gerüchte
         Console.WriteLine("Du probierst interessanten Tratsch aufzuschnappen...");
         int wurf = _random.Next(1, 100);
         if (wurf > 69 )
-        {
+        {   Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Du hörst nichts sonderlich spannendes... ");
+            Console.ResetColor();
             return;
         }
         else
@@ -38,16 +39,18 @@ public class Gerüchte
             }
             
             if (unbekannteGerÜchte.Count == 0)
-            {
+            {   Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Du kennst bereits alle Gerüchte in dieser Stadt.");
+                Console.ResetColor();
                 return;
             }
 
             int index = _random.Next(unbekannteGerÜchte.Count);
             string gerücht = unbekannteGerÜchte[index];
-
-            Console.WriteLine($"Du hörst ein neues Gerücht: \"{gerücht}\"");
-
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Du hörst ein neues Gerücht:");
+            Console.ResetColor();
+            Console.WriteLine(gerücht);
             // Im Spieler vermerken
             spieler.BekannteGeruechte.Add(gerücht);
         }

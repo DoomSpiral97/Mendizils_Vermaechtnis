@@ -16,7 +16,7 @@ public static class StadtErkunden
             Console.WriteLine("0) Zurück in das Hauptmenü");
             Console.Write("Deine Wahl: ");
 
-            string eingabe = Console.ReadLine();
+            string eingabe = Console.ReadLine().ToLower();
 
             switch (eingabe)
             {
@@ -35,7 +35,7 @@ public static class StadtErkunden
                 case "0":
                     inStadt = false;
                     break;
-
+                
                 default:
                     Console.WriteLine("Ungültige Eingabe.");
                     break;
@@ -60,16 +60,25 @@ public static class StadtErkunden
             {
                 case "1":
                     Console.WriteLine("Du bittest einen Priester um Heilung und wirst geheilt");
-                    spieler.HP = spieler.MaximaleHP;
-                    Console.WriteLine($"Deine Lebenspunkte wurden erhöht. Aktuelle HP:{spieler.HP}");
-                    break;
+                    if (spieler.HP < spieler.MaximaleHP)
+                    {
+                        spieler.HP = spieler.MaximaleHP;
+                        Console.WriteLine($"Deine Lebenspunkte wurden erhöht. Aktuelle HP:{spieler.HP}");
+                        break; 
+                    }
+                    else
+                    {
+                        Console.WriteLine("Du hast bereits volle HP");
+                        break;
+                    }
+                    
 
                 case "2":
-
+                    Console.WriteLine(" $\"Der Priester lächelt mild, als du den goldenen Altar betrachtest.\\n\" +\n    $\"„Beeindruckend, nicht wahr? Und doch gehört dieses Gold keiner Krone und keinem Magister.“\\n\" +\n    $\"Er senkt die Stimme. „Vor tausend Jahren brachte eine Heldin einen Drachenschatz hierher – \" +\n    $\"sie hätte sich Paläste bauen können, doch sie bat nur um einen Tempel für die Stadt.“\\n\" +\n    $\"„Seitdem erinnern diese Mauern daran, dass wahrer Ruhm nicht im Horten von Gold liegt,\\n\" +\n    $\"sondern darin, was man bereit ist, für andere zu opfern.“\";");
                     break;
 
                 case "3":
-
+                        HoereGeruechte(spieler);
                     break;
                 
                 case "4":
@@ -104,7 +113,6 @@ public static class StadtErkunden
             Console.WriteLine("Du betrittst die verrauchte Bar ");
             Console.WriteLine("1.Ein Bier Bestellen");
             Console.WriteLine("2.Zimmer nehmen");
-            Console.WriteLine("3. Umschauen");
             Console.WriteLine("0.Bar verlassen");
             string eingabe = Console.ReadLine();
 
@@ -117,6 +125,15 @@ public static class StadtErkunden
                             "Du gehst an die Bar, wirst angerempelt. Bruder von sigur sigurdson will stress");
                         //Quests.BarQuestBruder(spieler); Muss angelegt werden
                     }
+
+                    else if(spieler.Inventar.Contains(Items.Kristall))
+                {
+                    Console.WriteLine($"Du gehst richtung Bar, als eine alte Greisin dich am Arm packt\nDu bist doch{spieler.Name}, ICh habe gehört, dass du bei den Ruinen für Ruhe gesorg hast. \nVielen Dank! Endlich kann ich meinem Karl wieder Blumen bringen.");
+                }
+                    else if (spieler.Inventar.Contains(Items.Amulett))
+                    {
+                        
+                    }
                     else
                     {
                         Console.WriteLine("Du trinkst Bier. Es schmeckt nicht.");
@@ -127,12 +144,11 @@ public static class StadtErkunden
 
                 case "2":
                     Console.WriteLine("Du nimmst dier ein Zimmer und ruhst dich aus");
+                    if (spieler.HP+20 <= spieler.MaximaleHP )
                     spieler.HP += 20;
                     break;
 
-                case "3":
-                    Console.WriteLine("Asci Bar Platzhalter");
-                    break;
+                
 
                 case "0":
                     Console.WriteLine("Du verlässt die Bar, deine Kleidung riecht nach Rauch ");

@@ -12,16 +12,17 @@ public class Hilfsmethoden
         Console.WriteLine();
         Console.WriteLine("Du bist in der Stadt.");
         Console.WriteLine("Wohin möchtest du gehen?");
-        Console.WriteLine("1) In den Wald");
+        Console.WriteLine("1) Erkunde die Stadt.");
         Console.WriteLine("2) Zur Kammer des Magisters");
         Console.WriteLine("3) Zu den Ruinen der Trauer");
-        Console.WriteLine("4) Zur Drachenhöhle");
+        Console.WriteLine("4) In den düsteren Wald");
+        Console.WriteLine("5) Zur Drachenhöhle");
+        Console.WriteLine("5) Stadt erkunden");
         Console.WriteLine("I) Inventar anzeigen");
-        Console.WriteLine("6) Stadt erkunden");
         Console.WriteLine("0) Spiel beenden");
         Console.Write("Deine Wahl: ");
 
-        return Console.ReadLine();
+        return Console.ReadLine().ToLower();
     }
 
     public static void HappyEnd()
@@ -33,7 +34,6 @@ public class Hilfsmethoden
     {
         Console.WriteLine("Gib deinen Namen ein:");
         string sname = Console.ReadLine();
-
         Console.WriteLine("Wähle deine Klasse:");
         Console.WriteLine("1. Krieger");
         Console.WriteLine("2. Barde");
