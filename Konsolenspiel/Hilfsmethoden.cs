@@ -4,7 +4,7 @@ public class Hilfsmethoden
 {
     public static void Begrüßung()
     {
-        Console.WriteLine("Wilkommen");
+        Console.WriteLine("Willkommen");
     }
     
     public static string Questboard()
@@ -17,8 +17,8 @@ public class Hilfsmethoden
         Console.WriteLine("3) Zu den Ruinen der Trauer");
         Console.WriteLine("4) In den düsteren Wald");
         Console.WriteLine("5) Zur Drachenhöhle");
-        Console.WriteLine("5) Stadt erkunden");
         Console.WriteLine("I) Inventar anzeigen");
+        Console.WriteLine("S) Ins Journal schreiben(SPEICHERN)");
         Console.WriteLine("0) Spiel beenden");
         Console.Write("Deine Wahl: ");
 

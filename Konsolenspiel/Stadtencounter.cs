@@ -142,7 +142,4 @@ public class Stadtencounter : Encounter
                       "Morgen wird man sagen, ein Unfall sei geschehen –\n" +
                       "aber die Leute werden sich ansehen und zum ersten Mal seit Langem lächeln.");
 }
-
-
- 
 }

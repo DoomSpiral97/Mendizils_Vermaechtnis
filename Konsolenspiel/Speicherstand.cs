@@ -11,7 +11,9 @@ public static class Speicherstand
         var options = new JsonSerializerOptions { WriteIndented = true };
         string json = JsonSerializer.Serialize(spieler, options);
         File.WriteAllText(SaveFile, json);
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Spiel gespeichert.");
+        Console.ResetColor();
     }
 
     public static Spieler LadeSpieler()

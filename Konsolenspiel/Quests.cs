@@ -105,5 +105,22 @@ public class Quests
             Console.WriteLine(
                 "Du stehst vor dem Drachen und merkst, dass du keine Chance hast. Du rennst zurück in die sichere Stadt.");
         }
+        
+    }
+    public static void BarQuest(Spieler spieler)
+    {
+        
+            var encounter = new Barencounter();
+            bool barGeschafft = encounter.StartEncounter(spieler); 
+
+            if (barGeschafft)
+            {
+                spieler.ItemHinzufügen(Items.Amulett);
+            }
+            else
+            {
+                Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
+            }
+        
     }
 }

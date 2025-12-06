@@ -121,9 +121,7 @@ public static class StadtErkunden
                 case "1":
                     if (spieler.Inventar.Contains(Items.Schild))
                     {
-                        Console.WriteLine(
-                            "Du gehst an die Bar, wirst angerempelt. Bruder von sigur sigurdson will stress");
-                        //Quests.BarQuestBruder(spieler); Muss angelegt werden
+                        Quests.BarQuest(spieler);
                     }
 
                     else if(spieler.Inventar.Contains(Items.Kristall))
@@ -132,7 +130,7 @@ public static class StadtErkunden
                 }
                     else if (spieler.Inventar.Contains(Items.Amulett))
                     {
-                        
+                        Console.WriteLine("Ein kleines Kind spricht dich an und dankt dir, dass es jetzt wieder im Wald spielen kann.\n Du sagst Ihm, das eine Bar kein Ort für Kinder ist.");
                     }
                     else
                     {
@@ -147,9 +145,7 @@ public static class StadtErkunden
                     if (spieler.HP+20 <= spieler.MaximaleHP )
                     spieler.HP += 20;
                     break;
-
                 
-
                 case "0":
                     Console.WriteLine("Du verlässt die Bar, deine Kleidung riecht nach Rauch ");
                     inBar = false;

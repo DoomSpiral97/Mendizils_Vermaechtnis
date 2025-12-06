@@ -32,12 +32,6 @@ namespace Konsolengame
                 spieler = Hilfsmethoden.Charakterwahl();
             }
 
-            // ... dein Spiel-Loop ...
-
-
-
-
-
             while (spielLaeuft)
             {
 
