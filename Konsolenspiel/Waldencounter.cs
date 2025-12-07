@@ -7,7 +7,7 @@ public class WaldEncounter : Encounter
         Stärke = 10,
         Beschreibung = "Ein fieser Goblin",
         Charisma = 0,
-        HP = 85,
+        HP = 40,
         Name = "Groff der Brecher",
         Wahrnehmnung = 22,
         Beleidigung = $"Ich werde dich zu Wurst verarbeiten!",

@@ -99,22 +99,24 @@ public abstract class Encounter
             gegner.HP -= schaden;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"KRITISCHER TREFFER! Du verursachst {schaden} Schaden!");
+                Console.ResetColor();
             Console.WriteLine($"Gegner HP: {gegner.HP}");
         }
         else if (attackSpieler >= 12) // Treffer-Schwelle
         {
             int schaden = random.Next(1, spieler.Stärke + 1); // 1dStärke
             gegner.HP -= schaden;
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Treffer! Du verursachst {schaden} Schaden.");
+            Console.ResetColor();
             Console.WriteLine($"Gegner HP: {gegner.HP}");
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("Verfehlt!");
+            Console.ResetColor();
         }
-        Console.ResetColor();
         Console.ReadKey();
 
         if (gegner.HP <= 0)

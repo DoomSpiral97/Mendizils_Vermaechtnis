@@ -7,7 +7,7 @@ public class Drachenencounter :Encounter
     {
         Stärke = 22,
         Beschreibung = "Ein Drache",
-        HP = 200,
+        HP = 70,
         MaximaleHP = 10,
         Name = "Hurdurrr",
         Wahrnehmnung = 2,

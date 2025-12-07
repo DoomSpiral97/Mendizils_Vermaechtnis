@@ -6,7 +6,7 @@ public class Ruinenencounter : Encounter
     {
         Stärke = 16,
         Beschreibung = "Ein Skelett",
-        HP = 110,
+        HP = 55,
         MaximaleHP = 10,
         Wahrnehmnung = 19,
         Name = "Skelelol",

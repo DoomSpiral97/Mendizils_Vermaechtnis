@@ -50,8 +50,8 @@ public class Hilfsmethoden
                 {
                     Name = sname,
                     Beschreibung = "Krieger",
-                    HP = 120,
-                    MaximaleHP = 120,
+                    HP = 60,
+                    MaximaleHP = 60,
                     Stärke = 18,
                     Charisma = 5,
                     Stealth = 3
@@ -67,8 +67,8 @@ public class Hilfsmethoden
                 {
                     Name = sname,
                     Beschreibung = "Barde",
-                    HP = 90,
-                    MaximaleHP = 90,
+                    HP = 55,
+                    MaximaleHP = 55,
                     Stärke = 10,
                     Charisma = 20,
                     Stealth = 10
@@ -84,8 +84,8 @@ public class Hilfsmethoden
                 {
                     Name = sname,
                     Beschreibung = "Schurke",
-                    HP = 100,
-                    MaximaleHP = 100,
+                    HP = 57,
+                    MaximaleHP = 57,
                     Stärke = 12,
                     Charisma = 10,
                     Stealth = 20
