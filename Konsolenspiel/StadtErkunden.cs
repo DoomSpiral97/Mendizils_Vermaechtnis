@@ -108,9 +108,9 @@ public static class StadtErkunden
         BesucheBar(Spieler spieler) 
     {
         bool inBar = true;
+        Console.WriteLine("Du betrittst die verrauchte Bar ");
         while (inBar)
         {
-            Console.WriteLine("Du betrittst die verrauchte Bar ");
             Console.WriteLine("1.Ein Bier Bestellen");
             Console.WriteLine("2.Zimmer nehmen");
             Console.WriteLine("0.Bar verlassen");

@@ -100,7 +100,6 @@ public class Ruinenencounter : Encounter
 
         Console.WriteLine("\n„Hier ruht Mendizil Disi, Heldin dieser Stadt.“");
         Console.ReadKey();
-
         Console.WriteLine("\nBehutsam nimmst du den Kristall an dich.\n" +
                           "Sein Licht pulsiert einen Herzschlag lang in deiner Hand.");
         Console.ReadKey();
