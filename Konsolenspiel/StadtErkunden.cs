@@ -8,13 +8,17 @@ public static class StadtErkunden
 
         while (inStadt)
         {
+            
             Console.WriteLine();
             Console.WriteLine("Du schlenderst durch die Stadt. Was möchtest du tun?");
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1) In den Tempel gehen");
             Console.WriteLine("2) Nach Gerüchten umhören");
             Console.WriteLine("3) In die Bar gehen");
             Console.WriteLine("0) Zurück in das Hauptmenü");
+            Console.ResetColor();
             Console.Write("Deine Wahl: ");
+            
 
             string eingabe = Console.ReadLine().ToLower();
 
@@ -49,11 +53,13 @@ public static class StadtErkunden
         while (inTempel)
         {
             Console.WriteLine("Du betrittst den stillen Tempel. ");
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1.Heilen");
             Console.WriteLine("2.Mit Priester reden");
             Console.WriteLine("3. Gerüchte lauschen");
             Console.WriteLine("4. Tempel ansehen");
             Console.WriteLine("0.Tempel verlassen");
+            Console.ResetColor();
             string eingabe = Console.ReadLine();
             
             switch (eingabe)
@@ -74,7 +80,15 @@ public static class StadtErkunden
                     
 
                 case "2":
-                    Console.WriteLine(" $\"Der Priester lächelt mild, als du den goldenen Altar betrachtest.\\n\" +\n    $\"„Beeindruckend, nicht wahr? Und doch gehört dieses Gold keiner Krone und keinem Magister.“\\n\" +\n    $\"Er senkt die Stimme. „Vor tausend Jahren brachte eine Heldin einen Drachenschatz hierher – \" +\n    $\"sie hätte sich Paläste bauen können, doch sie bat nur um einen Tempel für die Stadt.“\\n\" +\n    $\"„Seitdem erinnern diese Mauern daran, dass wahrer Ruhm nicht im Horten von Gold liegt,\\n\" +\n    $\"sondern darin, was man bereit ist, für andere zu opfern.“\";");
+                    Console.WriteLine(
+                        "Der Priester lächelt mild, als du den goldenen Altar betrachtest.\n" +
+                        "„Beeindruckend, nicht wahr? Und doch gehört dieses Gold keiner Krone und keinem Magister.“\n" +
+                        "Er senkt die Stimme. „Vor tausend Jahren brachte eine Heldin einen Drachenschatz hierher – " +
+                        "sie hätte sich Paläste bauen können, doch sie bat nur um einen Tempel für die Stadt.“\n" +
+                        "„Seitdem erinnern diese Mauern daran, dass wahrer Ruhm nicht im Horten von Gold liegt,\n" +
+                        "sondern darin, was man bereit ist, für andere zu opfern.“"
+                    );
+
                     break;
 
                 case "3":
@@ -110,10 +124,11 @@ public static class StadtErkunden
         bool inBar = true;
         Console.WriteLine("Du betrittst die verrauchte Bar ");
         while (inBar)
-        {
+        {   Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1.Ein Bier Bestellen");
             Console.WriteLine("2.Zimmer nehmen");
             Console.WriteLine("0.Bar verlassen");
+            Console.ResetColor();
             string eingabe = Console.ReadLine();
 
             switch (eingabe)

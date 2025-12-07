@@ -9,9 +9,10 @@ public class Hilfsmethoden
     
     public static string Questboard()
     {
-        Console.WriteLine();
+        
         Console.WriteLine("Du bist in der Stadt.");
         Console.WriteLine("Wohin möchtest du gehen?");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
         Console.WriteLine("1) Erkunde die Stadt.");
         Console.WriteLine("2) Zur Kammer des Magisters");
         Console.WriteLine("3) Zu den Ruinen der Trauer");
@@ -20,6 +21,7 @@ public class Hilfsmethoden
         Console.WriteLine("I) Inventar anzeigen");
         Console.WriteLine("S) Ins Journal schreiben(SPEICHERN)");
         Console.WriteLine("0) Spiel beenden");
+        Console.ResetColor();
         Console.Write("Deine Wahl: ");
 
         return Console.ReadLine().ToLower();
@@ -31,13 +33,16 @@ public class Hilfsmethoden
     }
 
     public static Spieler Charakterwahl()
-    {
+    {   
         Console.WriteLine("Gib deinen Namen ein:");
         string sname = Console.ReadLine();
-        Console.WriteLine("Wähle deine Klasse:");
+        Console.WriteLine($"Willkommen in Grubenfurt {sname}. Wähle deine Klasse:");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
         Console.WriteLine("1. Krieger");
         Console.WriteLine("2. Barde");
         Console.WriteLine("3. Schurke");
+        Console.ResetColor();
+        
 
         while (true)
         {

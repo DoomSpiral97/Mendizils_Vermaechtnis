@@ -22,12 +22,13 @@ public abstract class Encounter
 
         while (!encounterBeendet)
         {
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("Wie möchtest du vorgehen?");
             Console.WriteLine("1) Kämpfen");
             Console.WriteLine("2) Überreden");
             Console.WriteLine("3) Schleichen");
             Console.WriteLine("4) Portrait ansehen");
+            Console.ResetColor();
             Console.Write("Deine Wahl: ");
 
             string? eingabe = Console.ReadLine();
