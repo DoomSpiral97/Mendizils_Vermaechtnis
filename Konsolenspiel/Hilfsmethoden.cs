@@ -71,7 +71,7 @@ public class Hilfsmethoden
     {   
         Console.WriteLine("Gib deinen Namen ein:");
         string sname = Console.ReadLine();
-        Console.WriteLine($"Willkommen in Grubenfurt {sname}. Wähle deine Klasse:");
+        Console.WriteLine($"Willkommen in der Region Lammerdell {sname}. Wähle deine Klasse:");
         Console.ForegroundColor = ConsoleColor.DarkCyan;
         Console.WriteLine("1. Krieger");
         Console.WriteLine("2. Barde");

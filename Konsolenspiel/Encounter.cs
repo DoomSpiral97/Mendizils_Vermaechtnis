@@ -99,6 +99,7 @@ public abstract class Encounter
 
     while (spieler.HP > 0 && gegner.HP > 0)
     {
+        Console.WriteLine($"Du kämpfst gegen {gegner.Name}");
         // === SPIELER-RUNDE ===
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine($"\n--- Deine Runde ---");
@@ -136,6 +137,7 @@ public abstract class Encounter
             Console.ResetColor();
         }
         Console.ReadKey();
+        Console.Clear();
 
         if (gegner.HP <= 0)
         {
@@ -146,6 +148,7 @@ public abstract class Encounter
         }
 
         // === GEGNER-RUNDE ===
+        Console.WriteLine($"Du kämpfst gegen {gegner.Name}");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine($"\n--- {gegner.Name}s Runde ---");
         Console.ResetColor();
@@ -184,6 +187,7 @@ public abstract class Encounter
         }
         Console.ResetColor();
         Console.ReadKey();
+        Console.Clear();
 
         if (spieler.HP <= 0)
         {
