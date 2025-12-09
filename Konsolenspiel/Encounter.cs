@@ -41,6 +41,10 @@ public abstract class Encounter
                     break;
                 case "2":
                     erfolgreich = TryPersuade(spieler, gegner);
+                    if (!erfolgreich)
+                    {
+                        erfolgreich = Fight(spieler, gegner);
+                    }
                     encounterBeendet = true;
                     break;
                 case "3":

@@ -17,7 +17,7 @@ public class Stadtencounter : Encounter
             SneakFail    = $"Du stolperst über eine lose Bordsteinkante. „Sehr unauffällig“, knurrt die Wache. „Willst du nicht gleich ein Schild hochhalten, auf dem ‘Einbrecher’ steht?“",
             KampfFail    = $"Ein harter Schlag seines Knüppels trifft dich an der Schläfe. „Nächster Möchtegern-Held erledigt“, murrt die Wache, während dir die Lichter ausgehen.",
             ÜberredenFail = 
-                $"Du räusperst dich wichtig und setzt an: „Also… deine Frau steht gerade besoffen in der Taverne auf dem Tresen, oberkörperfrei, und singt die Ballade von Mendizil Disi…\nDie Wache starrt dich an, blinzelt einmal langsam und verengt dann die Augen.\n„Netter Versuch“, knurrt er, „meine Frau ist seit drei Tagen bei ihrer Mutter auf dem Land.“\nBevor du reagieren kannst, setzt es einen sauberen Schlag mit dem Knüppel, und du wirst unsanft die Treppe hinunter vor das Haus befördert.",
+                $"Du räusperst dich wichtig und setzt an: „Also… deine Frau steht gerade besoffen in der Taverne auf dem Tresen, oberkörperfrei, und singt die Ballade von Mendizil Disi…\nDie Wache starrt dich an, blinzelt einmal langsam und verengt dann die Augen.\n„Netter Versuch“, knurrt er, „meine Frau ist seit drei Tagen bei ihrer Mutter auf dem Land.“\nBevor du reagieren kannst, setzt es einen sauberen Schlag mit dem Knüppel.",
 
         };
         

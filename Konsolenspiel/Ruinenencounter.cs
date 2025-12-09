@@ -13,7 +13,7 @@ public class Ruinenencounter : Encounter
         Beleidigung  = $"*Das Skelett klappert drohend mit seinem Unterkiefer und zeigt mit einem knochigen Finger auf dich.*",
         SneakFail    = $"*Ein Knochen knackt laut unter deinem Stiefel.* \"Du glaubst wohl, ich hab keine Ohren mehr?\", klappert Knochenkarl spöttisch.",
         KampfFail    = $"Mit einem letzten Hieb schickt dich Knochenkarl zu Boden. \"Siehst du? Fleisch ist einfach überschätzt\", rasselt er zufrieden.",
-        ÜberredenFail = $"Du versuchst gerade ernsthaft, ein Skelett zu überreden.\nSelbst der Wind in der Gruft scheint dich auszulachen."
+        ÜberredenFail = $"Du versuchst gerade ernsthaft, ein Skelett zu überreden.\nSelbst der Wind in der Gruft scheint dich auszulachen.Das Skelett zieht seine Waffe aus seinem Brustkorb"
     };
 
    

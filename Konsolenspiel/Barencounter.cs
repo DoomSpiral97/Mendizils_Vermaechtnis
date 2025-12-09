@@ -30,7 +30,7 @@ public class Barencounter:Encounter
             $"Du setzt an: „Hör zu, ich kenne da jemanden in Ehrenfort, der dir einen besseren Job—“\n" +
             $"Gusir verschränkt die Arme und verengt die Augen.\n" +
             $"„Natürlich“, sagt er trocken, „und ich bin der König von Ehrenfort.\" \n" +
-            $"Bevor du weitersprechen kannst, haut er dir eine und schleudert dich die Stufen hinunter."
+            $"Bevor du weitersprechen kannst, haut er dir eine und schleudert dich gegen einen Tisch."
     };
     public override void Überredenstext()
     {

@@ -7,7 +7,10 @@ public class Quests
         if (spieler.Inventar.Contains(Items.Amulett))
         {
             Console.WriteLine("Der Wald ist friedlich geworden seitdem du das Amulett an dich genommen hast. Du genießt die Ruhe für einen Moment und kehrst zurück in die Stadt");
-            spieler.HP += 10;
+            if (spieler.HP < spieler.MaximaleHP)
+            {
+                spieler.HP += 10;
+            }
         }
         else
         {

@@ -15,7 +15,6 @@ public class Spieler : Charakter
 
     public void ItemHinzufügen(Item item)
     {
-
         Inventar.Add(item);
         Console.WriteLine($"{item.Name} wurde deinem Inventar hinzugefügt.");
     }

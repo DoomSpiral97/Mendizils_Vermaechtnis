@@ -64,6 +64,10 @@ public class Hilfsmethoden
                 Console.WriteLine(
                     $"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n" +
                     $"Charisma: {spieler.Charisma}, Stärke: {spieler.Stärke}, Stealth: {spieler.Stealth}");
+                Console.WriteLine("Drücke eine Taste zum Fortfahren");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("...");
+                Console.ResetColor();
                 return spieler;
             }
             else if (input == "2")
@@ -98,6 +102,7 @@ public class Hilfsmethoden
                 Console.WriteLine(
                     $"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n" +
                     $"Charisma: {spieler.Charisma}, Stärke: {spieler.Stärke}, Stealth: {spieler.Stealth}");
+                Console.WriteLine("Introtext dass die Start vorstellt und Gerüchte anhören vorschlägt als Startpunkt...");
                 return spieler;
             }
             else
