@@ -6,6 +6,13 @@ public class Hilfsmethoden
     {
         Console.WriteLine("Willkommen");
     }
+
+    public static void Weiter()
+    {
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("...");
+        Console.ResetColor();
+    }
     
     public static string Questboard()
     {

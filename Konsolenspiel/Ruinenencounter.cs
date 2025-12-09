@@ -22,23 +22,26 @@ public class Ruinenencounter : Encounter
     {
         Console.WriteLine("Hinter der Stadt werden die Felder karger, das Grün weicht grauem Staub\n" +
                           "und abgestorbenen Sträuchern.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
-
         Console.WriteLine("\nDer Weg verwandelt sich in rissige Steinplatten, die von alten Wurzeln\n" +
                           "wie von Händen auseinander gedrückt werden.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
-
         Console.WriteLine("\nVor dir ragen die Ruinen eines verfallenen Bauwerks auf,\n" +
                           "eingestürzte Säulen zeichnen zackige Schatten in das fahle Licht.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nEine aufgebrochene Treppe führt hinab in die Dunkelheit einer Gruft.\n" +
                           "Die Luft wird kalt, trocken und riecht nach Staub und altem Eisen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nZwischen den zerbrochenen Sarkophagen regt sich etwas.\n" +
                           "Knochen klicken auf Stein, als sich ein Skelett aus einem Steinsarg erhebt\n" +
                           "und dir mit leer glimmenden Augenhöhlen entgegenstarrt.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nLangsam greift es nach einem verrosteten Schwert und stellt sich dir in den Weg.");
@@ -58,22 +61,27 @@ public class Ruinenencounter : Encounter
     {
         Console.WriteLine("Du atmest tief durch und stellst dich vor das Skelett, so würdevoll wie möglich,\n" +
                           "während sein leerer Blick dich mustert.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Ehrwürdiger Wächter“, beginnst du, „deine Pflicht ist längst erfüllt.\n" +
                           "Die Jahre haben dein Fleisch genommen, doch dein Dienst dauert immer noch an.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nEinen Moment lang bleibt alles still, nur ein loses Schlüsselbein klappert leicht,\n" +
                           "als würde Knochenkarl nachdenklich den Kopf schief legen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Selbst Helden brauchen irgendwann Ruhe“, fährst du fort.\n" +
                           "„Lass mich passieren, damit ich vollenden kann, was du einst begonnen hast.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDas Skelett senkt langsam sein Schwert.\n" +
                           "Ein feines Knirschen geht durch die Knochen, als würde ein uralter Entschluss brechen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nOhne ein Wort tritt Knochenkarl beiseite und lässt dich an sich vorbeigehen,\n" +
@@ -89,31 +97,39 @@ public class Ruinenencounter : Encounter
     protected override void ShowQuestSuccess()
     {
         Console.WriteLine("\nDu lässt den Wächter der Gruft hinter dir und gehst tiefer zwischen die steinernen Sarkophage.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nAm Ende des Ganges öffnet sich eine kleine Kammer, in der die Stille schwer wiegt.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nIn einem aufgebrochenen Grab schimmert ein Kristall in blassem Licht.\n" +
                           "Auf der zerbrochenen Platte kannst du gerade noch die Inschrift lesen:");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Hier ruht Mendizil Disi, Heldin dieser Stadt.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nBehutsam nimmst du den Kristall an dich.\n" +
                           "Sein Licht pulsiert einen Herzschlag lang in deiner Hand.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nAus den Gängen um dich herum hörst du das leise Klicken von Knochen,\n" +
                           "die nach und nach in sich zusammenfallen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDie ruhelosen Skelette sinken in sich zusammen, als hätte jemand die Fäden\n" +
                           "einer unsichtbaren Marionette zerschnitten.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nEine tiefe, ehrfürchtige Stille erfüllt die Gruft.\n" +
                           "Zum ersten Mal seit langer Zeit scheint hier wirkliche Ruhe eingekehrt zu sein.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nMit dem Kristall sicher verstaut machst du dich auf den Rückweg zur Oberfläche,\n" +

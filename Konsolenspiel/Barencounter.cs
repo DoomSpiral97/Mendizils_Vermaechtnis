@@ -36,34 +36,42 @@ public class Barencounter:Encounter
     {
         Console.WriteLine("Du hebst die Hände, bevor Gusir nach seinem Knüppel greifen kann,\n" +
                           "und versuchst, seine Wut in Worte zu fassen, bevor sie dich trifft.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Du bist Gusir, oder? Der Bruder der Wache, die vor dem Haus Dienst hatte…“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nSein Blick wird noch härter. „Schön, dass sich sogar Diebe daran erinnern“, knurrt er.\n" +
                           "„Wegen dir ist er seinen Posten los.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Wegen des Magisters“, korrigierst du ruhig.\n" +
                           "„Der wirft Leute weg wie altes Brot. Aber ich kenne jemanden in Ehrenfort,\n" +
                           "der gute Kämpfer sucht – für deutlich besseren Sold.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nEin Moment des Zögerns. Die Knöchel an seinem Griff werden weiß,\n" +
                           "doch er hat noch nicht zugeschlagen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Dein Bruder könnte dort arbeiten, ohne sich vor korrupten Feiglingen verbeugen zu müssen“,\n" +
                           "setzt du nach. „Und ohne dass dein Familienname an diesem Haus hier klebt.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nGusir atmet schwer aus, als würde er einen unsichtbaren Helm ablegen.\n" +
                           "„Wenn du lügst, finde ich dich“, sagt er leise, „aber wenn du recht hast…“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nEr tritt zur Seite, die Hand vom Knüppel gelöst.\n" +
                           "„Dann soll der Magister sehen, wie er ohne unsere Familie auskommt. Geh schon.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
     }
     protected override Gegner GetGegner()
@@ -74,40 +82,49 @@ public class Barencounter:Encounter
     {
         Console.WriteLine("Die Taverne ist heute Abend überfüllt, Stimmen und Gelächter vermischen sich\n" +
                           "mit dem süßlichen Geruch von Bier und Rauch.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDu bahnst dir den Weg zur Bar, schiebst betrunkene Gäste und klappernde Krüge beiseite,\n" +
                           "bis deine Finger fast schon den Tresen berühren.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nPlötzlich schießt eine Hand vor und packt dich hart am Arm.\n" +
                           "Ein über zwei Meter großer Mann, schwankend vor Alkohol, zieht dich zu sich herum.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nSein Blick ist glasig, aber voller Wut.\n" +
                           "„Ich bin Gusir Sigurdson“, knurrt er, Bieratem direkt in deinem Gesicht,\n" +
                           "„und wegen dir hat mein Bruder seinen Posten verloren…“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nEr stößt dich gegen den Tresen, dass die Krüge klirren.\n" +
                           "„Also, Schilddieb… wollen wir das hier klären.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
     }
     protected override void ShowQuestSuccess()
     {
         Console.WriteLine("\nDie Spannung in der Taverne fällt langsam ab, wie Rauch, der zur Decke zieht.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nGusir wirft dir noch einen letzten, prüfenden Blick zu,\n" +
                           "nickt knapp und lässt deine Schulter los.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\n„Dann sind wir quitt“, murmelt er schließlich,\n" +
                           "dreht sich um und verschwindet in der Menge aus Gästen und Krügen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDu setzt dich an die Bar, der Wirt stellt wortlos einen frischen Krug vor dich hin.\n" +
                           "Zum ersten Mal seit du die Taverne betreten hast, kannst du dein Bier in Ruhe trinken.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
     }
     public override void PortraitAnsehen()

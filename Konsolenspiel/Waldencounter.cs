@@ -20,14 +20,18 @@ public class WaldEncounter : Encounter
     {
         Console.WriteLine("Der Pfad aus der Stadt führt dich zwischen verwitterten Feldern hindurch,\n" +
                           "bis das Pflaster endet und nur noch feuchte Erde unter deinen Stiefeln nachgibt.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nMit jedem Schritt werden die Bäume dichter, ihre Kronen verschlingen das Licht\n" +
                           "wie gierige Münder.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nDer Wind verfängt sich in knorrigen Ästen, die wie Finger über dein Gepäck kratzen.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nGerade als du glaubst, allein zu sein, raschelt es heftig im Unterholz –\n" +
                           "und ein Goblin mit schiefem Lederhelm und viel zu großem Speer springt auf den Weg."); 
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nMit einem kreischenden Lachen stellt er sich breitbeinig vor dich,\n" +
                           "als wäre er der König dieses Waldes.");
@@ -47,18 +51,23 @@ public class WaldEncounter : Encounter
         Console.WriteLine("Du hebst beschwichtigend die Hände, bevor der Goblin zustechen kann.\n" +
                           "„Moment, großer Krieger“, sagst du ernst, „du WIRST heute jemanden ausrauben –\n" +
                           "aber garantiert nicht mich.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\n„Hinter mir kommt gleich ein Händler mit drei Maultieren voller Bier.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nDer Goblin blinzelt, senkt den Speer ein Stück.\n" +
                           "„Bier…? Drei Maultiere…?“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nDu legst verschwörerisch den Finger an die Lippen:\n" +
                           "„Wenn du mich jetzt durchlässt, erzähle ich natürlich niemandem,\n" +
                           "dass Groff der Brecher persönlich den Handel des Jahres gemacht hat.“");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\nNach einem Moment angestrengten Nachdenkens bricht er in ein schiefes Grinsen aus,\n" +
                           "stolpert vom Weg und duckt sich in die Büsche.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
         Console.WriteLine("\n„Na gut, Mensch. Geh schon.\n" +
                           "Aber wenn kein Bierhändler kommt, dann beiß ich dir beim nächsten Mal die Stiefel ab!“");
@@ -73,21 +82,26 @@ public class WaldEncounter : Encounter
     {
         Console.WriteLine("\nDie bedrohliche Spannung in der Luft löst sich,\n" +
                           "und nur das Rascheln der Blätter und das entfernte Rufen eines Vogels bleiben zurück.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDu folgst dem schmalen Pfad weiter, bis er sich zu einer kleinen Lichtung öffnet.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nIn der Mitte steht ein kruder Altar aus zusammengetragenen Steinen,\n" +
                           "offensichtlich von Goblins errichtet.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDarauf liegt ein Amulett, dessen Oberfläche in einem tiefen Rot glimmt;\n" +
                           "von dem Altar ziehen sich glühende Energiefäden wie feine Wurzeln in den Boden.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nVorsichtig nimmst du das Amulett an dich.\n" +
                           "In dem Moment verlöschen die roten Adern, und die Lichtung wirkt schlagartig friedlicher.");
+        Hilfsmethoden.Weiter();
         Console.ReadKey();
 
         Console.WriteLine("\nDer Wald scheint aufzuseufzen – als hätte jemand einen alten Fluch gelöst.\n" +
