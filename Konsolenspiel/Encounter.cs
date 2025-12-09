@@ -51,6 +51,11 @@ public abstract class Encounter
                     break;
                 case "3":
                     erfolgreich = TrySneak(spieler, gegner);
+                    if (!erfolgreich)
+                    {Hilfsmethoden.Weiter();
+                        Console.Clear();
+                        erfolgreich = Fight(spieler, gegner);
+                    }
                     encounterBeendet = true;
                     break;
                 case "4":
