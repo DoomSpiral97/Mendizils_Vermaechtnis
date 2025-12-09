@@ -4,7 +4,7 @@ public class Quests
 {
     public static void WaldQuest(Spieler spieler)
     {
-        if (spieler.Inventar.Contains(Items.Amulett))
+        if (spieler.Inventar.Contains(Item.Amulett))
         {
             Console.WriteLine("Der Wald ist friedlich geworden seitdem du das Amulett an dich genommen hast. Du genießt die Ruhe für einen Moment und kehrst zurück in die Stadt");
             if (spieler.HP < spieler.MaximaleHP)
@@ -19,7 +19,7 @@ public class Quests
 
             if (waldGeschafft)
             {
-                spieler.ItemHinzufügen(Items.Amulett);
+                spieler.ItemHinzufügen(Item.Amulett);
             }
             else
             {
@@ -30,7 +30,7 @@ public class Quests
 
     public static void MagisterQuest(Spieler spieler)
     {
-        if (spieler.Inventar.Contains(Items.Schild))
+        if (spieler.Inventar.Contains(Item.Schild))
         {
             Console.WriteLine("Du siehst noch leichte Rauchschwaden aus dem einstigen Anwesen aufsteigen");
         }
@@ -41,7 +41,7 @@ public class Quests
 
             if (stadtGeschafft)
             {
-                spieler.ItemHinzufügen(Items.Schild);
+                spieler.ItemHinzufügen(Item.Schild);
             }
             else
             {
@@ -52,7 +52,7 @@ public class Quests
 
     public static void RuinenQuest(Spieler spieler)
     {
-        if (spieler.Inventar.Contains(Items.Kristall))
+        if (spieler.Inventar.Contains(Item.Kristall))
         {
             Console.WriteLine("Die Ruinen sind ruhig, du siehst dass sich  deinem letzten Besuch ein paar Blumen gesprossen sind. ");
         }
@@ -63,7 +63,7 @@ public class Quests
 
             if (ruineGeschafft)
             {
-                spieler.ItemHinzufügen(Items.Kristall);
+                spieler.ItemHinzufügen(Item.Kristall);
             }
             else
             {
@@ -76,9 +76,9 @@ public class Quests
 
     public static void DrachenQuest(Spieler spieler)
     {
-        if (spieler.Inventar.Contains(Items.Kristall) &&
-            spieler.Inventar.Contains(Items.Schild) &&
-            spieler.Inventar.Contains(Items.Amulett))
+        if (spieler.Inventar.Contains(Item.Kristall) &&
+            spieler.Inventar.Contains(Item.Schild) &&
+            spieler.Inventar.Contains(Item.Amulett))
         {
             var encounter = new Drachenencounter();
             bool dracheGeschafft = encounter.StartEncounter(spieler);
@@ -87,7 +87,7 @@ public class Quests
             {
                 Console.WriteLine(
                     "Du kehrst erfolgreich in die Stadt zurück mit dem Schatz des Drachen in deinem Beutel");
-                spieler.ItemHinzufügen(Items.Goldkiste);
+                spieler.ItemHinzufügen(Item.Goldkiste);
             }
             else
             {
@@ -96,9 +96,9 @@ public class Quests
 
         
 
-        else if(spieler.Inventar.Contains(Items.Kristall) &&
-         spieler.Inventar.Contains(Items.Schild) &&
-         spieler.Inventar.Contains(Items.Amulett)&& spieler.Inventar.Contains(Items.Goldkiste))
+        else if(spieler.Inventar.Contains(Item.Kristall) &&
+         spieler.Inventar.Contains(Item.Schild) &&
+         spieler.Inventar.Contains(Item.Amulett)&& spieler.Inventar.Contains(Item.Goldkiste))
         {
             Console.WriteLine("Aasfresser haben begonnen an den Überresten des Drachen zu nagen. Du denkst an deine alten Heldentaten zurück und gehst mit einem Lächeln auf den Lippen zurück in die Stadt.");
         }
@@ -117,7 +117,7 @@ public class Quests
 
             if (barGeschafft)
             {
-                spieler.ItemHinzufügen(Items.Bier);
+                spieler.ItemHinzufügen(Item.Bier);
             }
             else
             {

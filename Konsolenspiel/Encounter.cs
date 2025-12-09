@@ -19,11 +19,12 @@ public abstract class Encounter
         var gegner = GetGegner();
         bool erfolgreich = false;
         bool encounterBeendet = false;
-
+        Hilfsmethoden.Weiter();
+        Console.Clear();
         while (!encounterBeendet)
         {
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("Wie möchtest du vorgehen?");
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1) Kämpfen");
             Console.WriteLine("2) Überreden");
             Console.WriteLine("3) Schleichen");
@@ -42,7 +43,8 @@ public abstract class Encounter
                 case "2":
                     erfolgreich = TryPersuade(spieler, gegner);
                     if (!erfolgreich)
-                    {
+                    {Hilfsmethoden.Weiter();
+                        Console.Clear();
                         erfolgreich = Fight(spieler, gegner);
                     }
                     encounterBeendet = true;
@@ -52,16 +54,21 @@ public abstract class Encounter
                     encounterBeendet = true;
                     break;
                 case "4":
-                PortraitAnsehen();    
+                PortraitAnsehen();
+                Hilfsmethoden.Weiter();
+                Console.Clear();
                 break;
                 default:
                     Console.WriteLine("Ungültige Auswahl, bitte 1 / 2 / 3 eingeben.");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
             }
         }
 
         if (erfolgreich)
-        {
+        {Hilfsmethoden.Weiter();
+            Console.Clear();
             ShowQuestSuccess();
         }
         else
@@ -81,6 +88,7 @@ public abstract class Encounter
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine($"{gegner.Name} stellt sich dir zum Kampf!");
+    Console.Clear();
     Console.ResetColor();
     Console.ReadKey();
 
@@ -193,6 +201,8 @@ public abstract class Encounter
     {
         Console.WriteLine();
         Console.WriteLine($"Du versuchst, {gegner.Name} zu überreden, dich in Ruhe zu lassen...");
+        Hilfsmethoden.Weiter();
+        Console.Clear();
 
         int wurf = Random.Next(1, 21);
         int probe = wurf + spieler.Charisma;

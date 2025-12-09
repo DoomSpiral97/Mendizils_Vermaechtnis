@@ -15,8 +15,8 @@ public class Hilfsmethoden
     public static string Questboard()
     {
         
-        Console.WriteLine("Du bist in der Stadt.");
-        Console.WriteLine("Wohin möchtest du gehen?");
+        Console.WriteLine("Du bist auf dem Marktplatz.");
+        Console.WriteLine("Was möchtest du tun?");
         Console.ForegroundColor = ConsoleColor.DarkCyan;
         Console.WriteLine("1) Erkunde die Stadt.");
         Console.WriteLine("2) Zur Kammer des Magisters");
@@ -39,6 +39,34 @@ public class Hilfsmethoden
         Hilfsmethoden.Weiter();
     }
 
+    public static void SpielbeginnLore()
+    {
+        Console.WriteLine("Seit Tagen hast du nur Bruchstücke gehört: Geschichten von abgebrannten Feldern,\n" +
+                          "verlassenen Höfen und Dörfern, in denen nachts Schreie über die Dächer hallen.");
+        Hilfsmethoden.Weiter();
+
+        Console.WriteLine("\nAuf deinem Weg durch die Landschaft findest du immer wieder zerfledderte Zettel,\n" +
+                          "an Bäume genagelt oder von Steinen beschwert.");
+        Hilfsmethoden.Weiter();
+
+        Console.WriteLine("\n„Helft uns!“, steht dort in hastigen, krakeligen Buchstaben.\n" +
+                          "„Monster terrorisieren unsere Stadt. Wir schaffen es nicht allein.“");
+        Hilfsmethoden.Weiter();
+
+        Console.WriteLine("\nJe mehr du liest, desto klarer wird dein Weg.\n" +
+                          "Du folgst der staubigen Straße, vorbei an verfallenen Mauern und leeren Feldern.");
+        Hilfsmethoden.Weiter();
+
+        Console.WriteLine("\nSchließlich siehst du sie vor dir: eine Stadt, deren Mauern schon bessere Tage gesehen haben,\n" +
+                          "aber aus der immer noch Rauch von Schornsteinen in den Himmel steigt.");
+        Hilfsmethoden.Weiter();
+
+        Console.WriteLine("\nAm Tor hängen die gleichen Hilferufe wie unterwegs.\n" +
+                          "Du trittst über die Schwelle – und weißt, dass du hier nicht nur Durchreisender sein wirst.");
+        
+        Hilfsmethoden.Weiter();
+
+    }
     public static Spieler Charakterwahl()
     {   
         Console.WriteLine("Gib deinen Namen ein:");
@@ -112,7 +140,6 @@ public class Hilfsmethoden
                 Console.WriteLine(
                     $"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n" +
                     $"Charisma: {spieler.Charisma}, Stärke: {spieler.Stärke}, Stealth: {spieler.Stealth}");
-                Console.WriteLine("Introtext dass die Start vorstellt und Gerüchte anhören vorschlägt als Startpunkt...");
                 return spieler;
             }
             else

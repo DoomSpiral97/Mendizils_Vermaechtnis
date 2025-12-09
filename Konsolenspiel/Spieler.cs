@@ -23,7 +23,7 @@ public class Spieler : Charakter
         Console.WriteLine("Du hast folgende Items in deinem Inventar.");
         foreach (Item i in Inventar)
         {
-            Console.WriteLine(i.Name);
+            Console.WriteLine($"{i.Name} - {i.Beschreibung}");
         }
         Console.WriteLine("Drücke eine Taste um zurückzukehren");
         Console.ReadKey();

@@ -14,6 +14,7 @@ public static class Speicherstand
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Spiel gespeichert.");
         Console.ResetColor();
+        Hilfsmethoden.Weiter();
     }
 
     public static Spieler LadeSpieler()

@@ -8,15 +8,13 @@ public static class StadtErkunden
 
         while (inStadt)
         {
-            
-            Console.WriteLine();
             Console.WriteLine("Du schlenderst durch die Stadt. Was möchtest du tun?");
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1) In den Tempel gehen");
             Console.WriteLine("2) Nach Gerüchten umhören");
             Console.WriteLine("3) In die Bar gehen");
             Console.WriteLine("4) Sich im Brunnen anschauen");
-            Console.WriteLine("0) Zurück in das Hauptmenü");
+            Console.WriteLine("0) Zurück zum Marktplatz");
             Console.ResetColor();
             Console.Write("Deine Wahl: ");
             
@@ -40,6 +38,8 @@ public static class StadtErkunden
                 case "4":
                     Console.WriteLine("Du beugst dich zu Brunnen und siehst dein Spigelbild im klaren Wasser");
                     Console.WriteLine($"{spieler.Portrait}");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
 
                 case "0":
@@ -57,7 +57,7 @@ public static class StadtErkunden
     {
         bool inTempel = true;
         while (inTempel)
-        {
+        {    Console.Clear();
             Console.WriteLine("Du betrittst den stillen Tempel. ");
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1.Heilen");
@@ -73,6 +73,8 @@ public static class StadtErkunden
                 case "1":
                     Console.WriteLine("Du bittest einen Priester um Heilung und wirst geheilt");
                     spieler.Heilen(1000);
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                         break;
                     
                     
@@ -86,25 +88,33 @@ public static class StadtErkunden
                         "„Seitdem erinnern diese Mauern daran, dass wahrer Ruhm nicht im Horten von Gold liegt,\n" +
                         "sondern darin, was man bereit ist, für andere zu opfern.“"
                     );
-
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
 
                 case "3":
                         HoereGeruechte(spieler);
+                       
                     break;
                 
                 case "4":
                     Console.WriteLine("               )\\         O_._._._A_._._._O         /(\n                \\`--.___,'=================`.___,--'/\n                 \\`--._.__                 __._,--'/\n                   \\  ,. l`~~~~~~~~~~~~~~~'l ,.  /\n       __            \\||(_)!_!_!_.-._!_!_!(_)||/            __\n       \\\\`-.__        ||_|____!!_|;|_!!____|_||        __,-'//\n        \\\\    `==---='-----------'='-----------`=---=='    //\n        | `--.                                         ,--' |\n         \\  ,.`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',.  /\n           \\||  ____,-------._,-------._,-------.____  ||/\n            ||\\|___!`=======\"!`=======\"!`=======\"!___|/||\n            || |---||--------||-| | |-!!--------||---| ||\n  __O_____O_ll_lO_____O_____O|| |'|'| ||O_____O_____Ol_ll_O_____O__\n  o H o o H o o H o o H o o |-----------| o o H o o H o o H o o H o\n ___H_____H_____H_____H____O =========== O____H_____H_____H_____H___\n                          /|=============|\\\n()______()______()______() '==== +-+ ====' ()______()______()______()\n||{_}{_}||{_}{_}||{_}{_}/| ===== |_| ===== |\\{_}{_}||{_}{_}||{_}{_}||\n||      ||      ||     / |==== s(   )s ====| \\     ||      ||      ||\n======================()  =================  ()======================\n----------------------/| ------------------- |\\----------------------\n                     / |---------------------| \\\n-'--'--'           ()  '---------------------'  ()\n                   /| ------------------------- |\\    --'--'--'\n       --'--'     / |---------------------------| \\    '--'\n                ()  |___________________________|  ()           '--'-\n  --'-          /| _______________________________  |\\\n --'           / |__________________________________| \\");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
                 
 
                 case "0":
                     Console.WriteLine("Du verlässt den Tempel");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     inTempel = false;
                     break;
 
                 default:
                     Console.WriteLine("Ungültige Eingabe.");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
             }
         }
@@ -114,15 +124,19 @@ public static class StadtErkunden
     private static void HoereGeruechte(Spieler spieler)
     {
         Gerüchte.GerüchteHören(spieler);
+        Hilfsmethoden.Weiter();
+        Console.Clear();
     }
 
     private static void
         BesucheBar(Spieler spieler) 
     {
         bool inBar = true;
-        Console.WriteLine("Du betrittst die verrauchte Bar ");
         while (inBar)
-        {   Console.ForegroundColor = ConsoleColor.DarkCyan;
+        {   
+            Console.Clear();
+            Console.WriteLine("Du bist in der  verrauchten Bar ");
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("1.Ein Bier Bestellen");
             Console.WriteLine("2.Zimmer nehmen");
             Console.WriteLine("0.Bar verlassen");
@@ -132,24 +146,34 @@ public static class StadtErkunden
             switch (eingabe)
             {
                 case "1":
-                    if (spieler.Inventar.Contains(Items.Schild)&&!spieler.Inventar.Contains(Items.Bier))
+                    if (spieler.Inventar.Contains(Item.Schild)&&!spieler.Inventar.Contains(Item.Bier))
                     {
                         Quests.BarQuest(spieler);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                     }
                     
 
-                    else if(spieler.Inventar.Contains(Items.Kristall))
-                {
+                    else if(spieler.Inventar.Contains(Item.Kristall))
+                    {
                     Console.WriteLine($"Du gehst richtung Bar, als eine alte Greisin dich am Arm packt\nDu bist doch{spieler.Name}, ICh habe gehört, dass du bei den Ruinen für Ruhe gesorg hast. \nVielen Dank! Endlich kann ich meinem Karl wieder Blumen bringen.");
-                }
-                    else if (spieler.Inventar.Contains(Items.Amulett))
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
+                    
+                    }
+                    
+                    else if (spieler.Inventar.Contains(Item.Amulett))
                     {
                         Console.WriteLine("Ein kleines Kind spricht dich an und dankt dir, dass es jetzt wieder im Wald spielen kann.\n Du sagst Ihm, das eine Bar kein Ort für Kinder ist und schickst es weg.");
-                    }
+                        Hilfsmethoden.Weiter();
+                        Console.Clear(); }
+                  
                     else
                     {
                         Console.WriteLine("Du trinkst Bier. Es schmeckt nicht.");
                         spieler.Schaden(20);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                     }
 
                     break;
@@ -157,15 +181,21 @@ public static class StadtErkunden
                 case "2":
                     Console.WriteLine("Du nimmst dier ein Zimmer und ruhst dich aus");
                     spieler.Heilen(20);
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
                 
                 case "0":
                     Console.WriteLine("Du verlässt die Bar, deine Kleidung riecht nach Rauch ");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     inBar = false;
                     break;
 
                 default:
                     Console.WriteLine("Ungültige Eingabe.");
+                    Hilfsmethoden.Weiter();
+                    Console.Clear();
                     break;
             }
         }

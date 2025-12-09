@@ -30,42 +30,57 @@ namespace Konsolengame
             else
             {
                 spieler = Hilfsmethoden.Charakterwahl();
+                Hilfsmethoden.SpielbeginnLore();
+                spieler.ItemHinzufügen(Item.Hilferuf);
+                Hilfsmethoden.Weiter();
+                Console.Clear();
             }
 
             while (spielLaeuft)
             {
-
+                
                 string? eingabe = Hilfsmethoden.Questboard();
 
                 switch (eingabe)
                 {
                     case "1":
-                    {
+                    {   Console.Clear();
                         StadtErkunden.Start(spieler);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                         break;
                     }
 
                     case "2":
                     {
                         Quests.MagisterQuest(spieler);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                         break;
                     }
                     case "3":
                     {
                         Quests.RuinenQuest(spieler);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                         break;
                     }
                     case "5":
                     {
                         Quests.DrachenQuest(spieler);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                         break;
                     }
                     case "4":
                         Quests.WaldQuest(spieler);
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                         break;
                     case "i":
                     {
                         spieler.InventarAnzeigen();
+                        Console.Clear();
                         break;
                     }
                     case "0":
@@ -73,13 +88,15 @@ namespace Konsolengame
                         spielLaeuft = false;
                         break;
                     case "s":
-                        Console.WriteLine(
-                            "Du denkst über deine Erlebten Abenteuer nach und schreibst sie in dein Tagebuch");
+                        Console.WriteLine("Du denkst über deine Erlebten Abenteuer nach und schreibst sie in dein Tagebuch");
                         Speicherstand.SpeichereSpieler(spieler);
+                        Console.Clear();
                         break;
 
                     default:
                         Console.WriteLine("Ungültige Eingabe.");
+                        Hilfsmethoden.Weiter();
+                        Console.Clear();
                         break;
                 }
             }
