@@ -2,16 +2,14 @@ namespace Konsolengame;
 
 public class Hilfsmethoden
 {
-    public static void Begrüßung()
-    {
-        Console.WriteLine("Willkommen");
-    }
-
+    
     public static void Weiter()
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("...");
         Console.ResetColor();
+        Console.ReadKey();
+
     }
     
     public static string Questboard()
@@ -37,6 +35,8 @@ public class Hilfsmethoden
     public static void HappyEnd()
     {
         Console.WriteLine("Du hast das Abenteuer gemeistert, mehr Quests gibt es mit dem Addon * Eisklauen von Sommerfell* für nur 12,99€");
+        Console.WriteLine(("Du kannst weiter die Stadt erkunden, aber das Endgame ist aktuell eher mau"));
+        Hilfsmethoden.Weiter();
     }
 
     public static Spieler Charakterwahl()

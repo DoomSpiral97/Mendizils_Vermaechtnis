@@ -37,27 +37,22 @@ public class Stadtencounter : Encounter
         Console.WriteLine("Die Straßen der Stadt sind zu dieser Stunde ungewöhnlich still.\n" +
                           "Nur vereinzelte Laternen werfen flackernde Lichtkegel auf das Kopfsteinpflaster.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nDu schleichst an geschlossenen Marktständen vorbei,\n" +
                           "deren bunte Planen im Nachtwind rascheln wie geflüsterte Anklagen.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nVor dir erhebt sich das Anwesen des Magisters:\n" +
                           "ein viel zu prunkvolles Haus mit Marmorstufen und goldenen Beschlägen an der Tür.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nHinter einem der oberen Fenster erkennst du den Schimmer des legendären Schildes,\n" +
                           "das er sich von den Steuern der Bürger gekauft hat.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nGerade als du die Stufen hinaufsteigen willst,\n" +
                           "tritt eine Stadtwache aus dem Schatten der Tür und versperrt dir mit verschränkten Armen den Weg.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nSein Blick wandert von deinen Stiefeln über deinen Gürtel zu deinem Gesicht.\n" +
                           "„Geschäftliche Angelegenheit mit dem Magister?“, fragt er mit einem Ton,\n" +
@@ -70,42 +65,34 @@ public class Stadtencounter : Encounter
         Console.WriteLine("Du hebst die Hände, bevor der Wachmann nach seinem Knüppel greifen kann,\n" +
                           "und senkst die Stimme zu einem verschwörerischen Flüstern.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\n„Ganz ruhig“, beginnst du, „ich bin nicht hier, um in dein Protokoll zu landen.\n" +
                           "Ich bin hier, um deine Ehe zu retten.“");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nDie Stirn der Wache legt sich in Falten, doch er hält inne.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\n„Weißt du, was gerade in der Taverne los ist?“ fragst du leise.\n" +
                           "„Deine Frau steht AUF dem Tresen, sturzbetrunken und oberkörperfrei,\n" +
                           "und brüllt die Ballade von Mendizil Disi in die Menge.“");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nDie Farbe weicht aus seinem Gesicht, dann schießt sie in einem ungesunden Rot zurück.\n" +
                           "Seine Finger verkrampfen sich um den Knüppel, diesmal eindeutig nicht deinetwegen.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\n„Jeder nennt dabei ihren Namen. Und deiner fällt nebenbei auch.\n" +
                           "Mit Dienstgrad“, fügst du hinzu, „laut genug, dass es bis zum Magister durchhallen könnte.“");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nEin langer Moment vergeht, dann stößt er einen halb gewürgten Fluch aus,\n" +
                           "reißt den Helm vom Kopf und stopft ihn sich unter den Arm.");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\n„Verdammt… ich hab für heute Feierabend“, knurrt er.\n" +
                           "„Wenn jemand fragt, war ich NIE hier.“");
         Hilfsmethoden.Weiter();
-        Console.ReadKey();
 
         Console.WriteLine("\nOhne dich eines weiteren Blickes zu würdigen,\n" +
                           "stürmt er die Straße hinunter, direkt in Richtung Taverne.");
@@ -122,41 +109,34 @@ public class Stadtencounter : Encounter
 {
     Console.WriteLine("\nDas Haus des Magisters liegt nun still vor dir, die Wache ist kein Hinderniss mehr. Keine weiteren Schritte hallen mehr auf der Straße.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nIm Inneren tastest du dich durch einen Flur voller teurer Teppiche\n" +
                       "und lächerlich vieler Gemälde, die alle nur das gleiche selbstgefällige Gesicht zeigen.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nIm Arbeitszimmer findest du schließlich, wonach du gesucht hast:\n" +
                       "Auf einem Sockel über dem Kamin hängt das legendäre Schild,\n" +
                       "poliert und mit dem Siegel des Magisters verziert, als wäre es seine eigene Heldentat.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nMit einem entschlossenen Griff nimmst du das Schild von der Halterung\n" +
                       "und verstaust es, so gut es geht – ein Stück wirklicher Geschichte,\n" +
                       "zurück in den Händen derer, die es verdienen.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nDein Blick bleibt an den Stapeln von Schriftrollen, Steuerlisten und Bestechungsschreiben hängen,\n" +
                       "die sich auf seinem Schreibtisch türmen.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nEin einzelnes Kerzenlicht reicht, um aus Papier ein Inferno zu machen:\n" +
                       "Flammen greifen nach den Dokumenten, kriechen über die Tischkante\n" +
                       "und springen auf die schweren Vorhänge über.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nAls du das Haus verlässt, steigt bereits Rauch aus den oberen Fenstern.\n" +
                       "Keine Schreie, nur das Prasseln von Feuer und das Knacken von Holz\n" +
                       "mischen sich in die Nachtluft.");
     Hilfsmethoden.Weiter();
-    Console.ReadKey();
 
     Console.WriteLine("\nMit dem Schild auf dem Rücken und Ruß an den Händen gehst du zurück in die dunklen Gassen der Stadt.\n" +
                       "Morgen wird man sagen, ein Unfall sei geschehen –\n" +

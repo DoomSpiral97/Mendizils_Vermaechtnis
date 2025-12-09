@@ -45,6 +45,8 @@ public class Drachenencounter :Encounter
     {
         Console.WriteLine();
         Console.WriteLine("Du hast den Schatz des Drachens erbeutet");
+        Hilfsmethoden.HappyEnd();
+        Hilfsmethoden.Weiter();
     }
 
  
