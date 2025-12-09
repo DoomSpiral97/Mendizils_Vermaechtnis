@@ -15,6 +15,7 @@ public static class StadtErkunden
             Console.WriteLine("1) In den Tempel gehen");
             Console.WriteLine("2) Nach Gerüchten umhören");
             Console.WriteLine("3) In die Bar gehen");
+            Console.WriteLine("4) Sich im Brunnen anschauen");
             Console.WriteLine("0) Zurück in das Hauptmenü");
             Console.ResetColor();
             Console.Write("Deine Wahl: ");
@@ -34,6 +35,11 @@ public static class StadtErkunden
 
                 case "3":
                     BesucheBar(spieler);
+                    break;
+                
+                case "4":
+                    Console.WriteLine("Du beugst dich zu Brunnen und siehst dein Spigelbild im klaren Wasser");
+                    Console.WriteLine($"{spieler.Portrait}");
                     break;
 
                 case "0":

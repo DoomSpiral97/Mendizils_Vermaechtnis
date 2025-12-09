@@ -66,7 +66,8 @@ public class Hilfsmethoden
                     MaximaleHP = 60,
                     Stärke = 18,
                     Charisma = 5,
-                    Stealth = 3
+                    Stealth = 3,
+                    Portrait = "\n      _,.\n    ,` -.)\n   ( _/-\\\\-._\n  /,|`--._,-^|            ,\n  \\_| |`-._/||          ,'|\n    |  `-, / |         /  /\n    |     || |        /  /\n     `r-._||/   __   /  /\n __,-<_     )`-/  `./  /\n'  \\   `---'   \\   /  /\n    |           |./  /\n    /           //  /\n\\_/' \\         |/  /\n |    |   _,^-'/  /\n |    , ``  (\\/  /_\n  \\,.->._    \\X-=/^\n  (  /   `-._//^`\n   `Y-.____(__}\n    |     {__)\n          ()"
                 };
                 Console.WriteLine(
                     $"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n" +
@@ -87,7 +88,8 @@ public class Hilfsmethoden
                     MaximaleHP = 55,
                     Stärke = 10,
                     Charisma = 20,
-                    Stealth = 10
+                    Stealth = 10,
+                    Portrait = "     \\\\||//\n     ~~..'~\n     (  \\ )\n      \\ c/\n     __\\/__\n    /      \\\n  _< .   _  \\\n  \\`\\ \\-'/ \\ \\   ,,,_\n   >|\"\"O[|||||nn[:::<\n  /_,---._\\      '''~\n  ~  |     |\n     |  |  |\n     |  |  |\n    /  /|  )\n  _/_ /_|__|__\n /           /\\\n/___________/  |\n\\___________\\__|"
                 };
                 Console.WriteLine(
                     $"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n" +
@@ -104,7 +106,8 @@ public class Hilfsmethoden
                     MaximaleHP = 57,
                     Stärke = 12,
                     Charisma = 10,
-                    Stealth = 20
+                    Stealth = 20,
+                    Portrait = "⠀⠀⠀⠀⠀⠀⢀⠀⠀⢀⣠⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⡀⠀⡠⢹⡠⠂⠡⠅⠒⢈⣕⠡⠐⡲⠂⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠰⢱⡐⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠘⠂⠀⡀⠖⠀⠀⠀⠀⠀\n⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠪⡀⠀⠀⠀⠀⠀⠀\n⠹⡐⠂⠀⣀⣠⣦⡀⠠⡀⠀⢄⠀⠀⠀⠀⠀⢀⢈⡂⠀⠀⠀⠀⠀\n⠀⠘⠴⠋⢁⡀⠴⣿⣦⣹⣦⣌⢷⣦⣜⣆⠀⠤⡡⡀⠈⠀⠀⠀⠀\n⠀⢸⡾⠋⢂⣀⣤⡽⠿⠛⢛⠋⡙⣿⠻⡟⠳⠺⡀⠑⠀⠀⠀⠀⠀\n⠀⠘⣤⡼⢿⣿⣿⡳⠀⠀⠚⣤⡇⢻⢇⡇⠀⠡⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠈⢷⢰⡞⠉⠁⠀⠀⠀⠀⠁⣤⣼⠀⠀⠘⡑⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⡘⠘⠃⠀⠀⠀⠀⠀⠀⠀⣿⠇⢡⠀⣩⣣⣤⣤⣶⡆⠀⠀\n⠀⠀⠀⠁⢳⢀⠠⠀⠀⠀⠀⣀⣠⣿⣶⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀\n⠀⠀⠀⠀⠀⢃⢙⣠⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀\n⠀⠀⠀⣀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀\n⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀\n⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧"
                 };
                 Console.WriteLine(
                     $"Du hast {spieler.Beschreibung} gewählt. Deine Stats sind:\n" +

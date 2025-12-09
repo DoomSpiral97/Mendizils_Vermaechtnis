@@ -8,7 +8,6 @@ public class Spieler : Charakter
     public int Stärke { get; set; }
     public int Charisma { get; set; }
     public int Stealth { get; set; }
-    public string Beschreibung { get; set; }
     public int Perception { get; set; }
     public List<Item> Inventar { get; set; } = new List<Item>();
     public List<string> BekannteGeruechte { get; set; } = new List<string>();
