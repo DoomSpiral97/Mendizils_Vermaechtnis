@@ -91,7 +91,6 @@ public class Quests
             }
             else
             {
-                Console.WriteLine("Niedergeschlagen kehrst du in die Stadt zurück...");
             }
         }
 
@@ -105,8 +104,8 @@ public class Quests
         }
         else
         {
-            Console.WriteLine(
-                "Du stehst vor dem Drachen und merkst, dass du keine Chance hast. Du rennst zurück in die sichere Stadt.");
+            Console.WriteLine("Du machst dich auf den Weg zur Drachenhöhle, den Hang hinauf zwischen verkohlten Felsen und verbrannter Erde.\n Als du den Eingang erreichst, stehst du nicht vor einem offenen Rachen im Fels, sondern vor einer schweren Steintür.\nIn den Stein sind Muster eingelassen – verschlungene Linien, die sich schließlich zu der klaren Form eines Schildes fügen.\nDu tastest über die Gravur und spürst sofort: Ohne das passende Schild wirst du hier keinen Schritt weiterkommen.\nDaneben sind noch zwei weitere Formen die du nicht genau erkennen kannst.\nDu gehst enttäuscht zurück in die Stadt...");
+
         }
         
     }
