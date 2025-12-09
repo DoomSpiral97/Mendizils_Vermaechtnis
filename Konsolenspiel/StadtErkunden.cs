@@ -72,17 +72,9 @@ public static class StadtErkunden
             {
                 case "1":
                     Console.WriteLine("Du bittest einen Priester um Heilung und wirst geheilt");
-                    if (spieler.HP < spieler.MaximaleHP)
-                    {
-                        spieler.HP = spieler.MaximaleHP;
-                        Console.WriteLine($"Deine Lebenspunkte wurden erhöht. Aktuelle HP:{spieler.HP}");
-                        break; 
-                    }
-                    else
-                    {
-                        Console.WriteLine("Du hast bereits volle HP");
+                    spieler.Heilen(1000);
                         break;
-                    }
+                    
                     
 
                 case "2":
@@ -152,20 +144,19 @@ public static class StadtErkunden
                 }
                     else if (spieler.Inventar.Contains(Items.Amulett))
                     {
-                        Console.WriteLine("Ein kleines Kind spricht dich an und dankt dir, dass es jetzt wieder im Wald spielen kann.\n Du sagst Ihm, das eine Bar kein Ort für Kinder ist.");
+                        Console.WriteLine("Ein kleines Kind spricht dich an und dankt dir, dass es jetzt wieder im Wald spielen kann.\n Du sagst Ihm, das eine Bar kein Ort für Kinder ist und schickst es weg.");
                     }
                     else
                     {
                         Console.WriteLine("Du trinkst Bier. Es schmeckt nicht.");
-                        spieler.HP -= 20;
+                        spieler.Schaden(20);
                     }
 
                     break;
 
                 case "2":
                     Console.WriteLine("Du nimmst dier ein Zimmer und ruhst dich aus");
-                    if (spieler.HP+20 <= spieler.MaximaleHP )
-                    spieler.HP += 20;
+                    spieler.Heilen(20);
                     break;
                 
                 case "0":

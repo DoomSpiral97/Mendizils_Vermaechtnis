@@ -28,4 +28,29 @@ public class Spieler : Charakter
         Console.WriteLine("Drücke eine Taste um zurückzukehren");
         Console.ReadKey();
     }
+    public void Heilen(int heilung)
+    {
+        HP += heilung;
+    
+        if (HP > MaximaleHP)
+        {
+            HP = MaximaleHP;
+        }
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"Dir geht es besser. Aktuelle HP: {HP}");
+        Console.ResetColor();
+    }
+    public void Schaden(int schaden)
+    {
+        HP += schaden;
+    
+        if (HP > MaximaleHP)
+        {
+            HP = MaximaleHP;
+        }
+        Console.ForegroundColor= ConsoleColor.Red;
+        Console.WriteLine($"Das hat dir nicht gut getan. Aktuelle HP: {HP}");
+        Console.ResetColor();
+    }
 }
+
