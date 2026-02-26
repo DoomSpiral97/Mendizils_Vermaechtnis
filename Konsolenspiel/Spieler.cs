@@ -25,7 +25,7 @@ public class Spieler : Charakter
         {
             Console.WriteLine($"{i.Name} - {i.Beschreibung}");
         }
-        Console.WriteLine("Drücke eine Taste um zurückzukehren");
+        Console.WriteLine("Drücke eine Taste um jetzt zurückzukehren");
         Console.ReadKey();
     }
     public void Heilen(int heilung)
